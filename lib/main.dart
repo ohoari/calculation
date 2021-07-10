@@ -43,3 +43,24 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+class ResultTextField extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Consumer<Calculate1>(builder: (context, model, child) {
+      double screenSizeWidth = MediaQuery
+          .of(context)
+          .size
+          .width;
+      return Container(
+        width: screenSizeWidth,
+        height: 50,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text("100"),
+          ],
+        ),
+      );
+    });
+  }
+}
